@@ -17,13 +17,13 @@
 ############################################################################
 
 # Efficiency macro location
-MacroLoc="/volatile/clas12/matthewn/FTOF_Test"
+MacroLoc="/Where/FTOF/macros/are"
 
 # Where you want all the output files to go
-OutputDir="/volatile/clas12/matthewn/FTOF_Test/temp3"
+OutputDir="/Where/Outputs/Go"
 
 # Where the data is stored
-DataDir="/cache/clas12/rg-a/production/recon/fall2018/torus-1/pass1/v0/dst/recon"
+DataDir="/Location/Of/Data"
 
 
 #############
@@ -31,32 +31,33 @@ DataDir="/cache/clas12/rg-a/production/recon/fall2018/torus-1/pass1/v0/dst/recon
 #############
 
 ## Option 1 ##
-## You can either run over all available runs between two numbers with option 1
-## For example "5032 5038" would run over runs: 5032, 5036, and 5038
+## This option is useful for running over lots of files. Run over all
+## available runs between minimum and maximum. For example running with
+## options (Min=5032 and Max=5036) would process runs 5032 and 5036 as there
+## is no data for 5033, 5034, and 5035.
 Min=5032
 Max=5038
 
 ## Option 2 ##
-## Or you can specify a list of runs you would like to analyse.
-## Simply list them inside the brackets below separated by a space
-
+## This option is good for running over a few select runs. Run over
+## specific runs in an array, just list runs in the RUNS array with a space
+## between each. For example, to run over 5032, 5036, and 5038
+## use RUNS=(5032 5036 5038)
 RUNS=(5032 5036 5038)
 
-# Make sure the option you want is included in section Making RCDB Files and the one
-# you don't is commented out
-
+# Comment out the option you do not want in the “Making RCDB files” section
 
 #############
 # TOF variables
 #############
 
 # ROOT output name, this is followed by the sequence number automatically
-OutputName="RGA_Fall18_Inbending"
+OutputName="Name_Of_Ouput_Files"
 
-# use Inbending/inbending/In/in or Outbending/outbending/Out/out
+# Polarity of data, use Inbending/inbending/In/in or Outbending/outbending/Out/out
 Polarity="Inbending"
 
-# Target mass
+# Target mass (GeV)
 targetMass=0.93827
 
 
@@ -65,7 +66,7 @@ targetMass=0.93827
 ############################################################################
 
 # Output name, this is followed by the sequence number automatically
-RCDBOutputName="RGA_PrepareDatabases_Fall18_Inbending"
+RCDBOutputName=$OutputName'_PrepareDatabases'
 
 # List of ouput ROOT files, used in part 2
 List=$OutputDir"/ROOT/list.txt"
