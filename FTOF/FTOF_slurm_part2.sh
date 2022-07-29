@@ -4,9 +4,8 @@
 # Running the code
 ############################################################################
 
-# Make sure to load root5: 
-## For ifarm usage
-### source /apps/root/5.34.36/root/bin/thisroot.csh
+# Make sure to load root5:
+## source /apps/root/5.34.36/root/bin/thisroot.csh
 # Fill in the user defined variables section below
 # Run using the command:
 ## ./FTOF_slurm_part2.sh
@@ -16,22 +15,18 @@
 ############################################################################
 
 
-#### These should match what was used in part 1
+# MacroLoc and OutputDir should match what was used in part 1
+
 # Efficiency macro location
-MacroLoc="/volatile/clas12/matthewn/FTOF_Test"
+MacroLoc="/Where/FTOF/macros/are"
 
-# Where you want the temporary files to go
-OutputDir="/volatile/clas12/matthewn/FTOF_Test/temp3"
-
-# Total outut file name
-Total="Total_Output.root"
-
-####
+# Where you want all the output files to go
+OutputDir="/Where/Outputs/Go"
 
 # Name of the efficiency output ROOT file
-OutName="RGA_Fall18_Inbending5032_Efficiency_Output_260722.root"
+OutName="Name_Of_Efficiency_Ouput_Files"
 
-# Range for efficiency histograms
+# Range for efficiency histograms, only effects canvas pdfs not ROOT output
 Min=0.75
 Max=1.1
 
@@ -56,5 +51,5 @@ sleep 2
 
 echo 'gROOT->ProcessLine(".L '$MacroLoc'/Canvases.C");' >> canvas.sh
 echo 'gROOT->ProcessLine("Canvases(\"'$OutputDir'/ROOT/'$Total'\",\"'$OutputDir'\",\"'$OutName'\",\"'$Min'\",\"'$Max'\")");' >> canvas.sh
-  
+
 /bin/more canvas.sh | root -b
