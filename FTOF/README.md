@@ -20,17 +20,17 @@ Option 1 – This option is useful for running over lots of files. Run over all 
 Option 2 – This option is good for running over a few select runs. Run over specific runs in an array, just list runs in the RUNS array with a space between each. For example, to run over 5032, 5036, and 5038 use RUNS=(5032 5036 5038)<br />
 <br />
 Comment out the option you do not want in the “Making RCDB files” section. For example, if you want to use option 1:<br />
-############################################################################<br />
-# Making RCDB files <br />
-############################################################################ <br />
-<br />
-## Option 1 ##<br />
-for NUMBER in $(seq $Min $Max);<br />
-<br />
-## Option 2 ##<br />
-#for NUMBER in "${RUNS[@]}"<br />
-<br />
+<pre>############################################################################
+# Making RCDB files 
+############################################################################ 
 
+## Option 1 ##
+for NUMBER in $(seq $Min $Max);
+
+## Option 2 ##
+#for NUMBER in "${RUNS[@]}"
+
+</pre>
 <h4>Running stage 1 </h4>
 Once set up, simply navigate to the location of the FTOF macros and enter the following command in the terminal:<br />
 ./FTOF_slurm_part1.sh<br />
