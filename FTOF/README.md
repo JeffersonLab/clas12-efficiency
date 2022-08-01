@@ -1,4 +1,4 @@
-The FTOF effi	ciency is performed in two stages. The first stage produces RCDB files for run information and processes the data files separately for reach run. The second stage combines all the processed files, determines the efficiencies and produces both a ROOT and canvas output of these. Currently, this is only to be run on the ifarm. 
+The FTOF efficiency is performed in two stages. The first stage produces RCDB files for run information and processes the data files separately for reach run. The second stage combines all the processed files, determines the efficiencies and produces both a ROOT and canvas output of these. Currently, this is only to be run on the ifarm. 
 
 Before running the FTOF efficiency code:
 Make sure all hipo files are present, jcache any missing ones
