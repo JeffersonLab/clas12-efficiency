@@ -5,7 +5,8 @@ Make sure all hipo files are present, jcache any missing ones <br />
 Load clas12root: <br />
 	source /group/clas12/packages/setup.csh <br />
 	module load clas12/pro <br />
-Make sure you have access to slurm account ‘clas12’ (https://scicomp.jlab.org/scicomp/slurmJob/slurmAccount) <br />
+Make sure you have access to slurm account ‘clas12’ <a href="https://scicomp.jlab.org/scicomp/slurmJob/slurmAccount">(Slurm Account)</a> 
+<br />
 
 <h3>Stage 1 </h3>
 <h4>Setting up stage 1 </h4>
@@ -47,9 +48,7 @@ MacroLoc and OutputDir should match what was used in part 1 <br />
 
 <h4>Before running Stage 2: </h4>
 Make sure stage 1 is complete. Check your slurm jobs either through ‘squeue -u username’ in ifarm terminal or go to  
-<a href="https://scicomp.jlab.org/scicomp/slurmJob/activeJob">(Slurm Accounts)</a> <br />
-
-Depending on the size of the runs you’re processing, it can take anywhere up to about an hour. <br />
+<a href="https://scicomp.jlab.org/scicomp/slurmJob/activeJob">(Slurm Jobs)</a> <br />
 <br />
 Load root5:<br />
 source /apps/root/5.34.36/root/bin/thisroot.csh<br />
