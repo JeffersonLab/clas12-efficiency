@@ -40,6 +40,9 @@ cd $OutputDir'/ROOT/'
 # List of ouput ROOT files, used in part 2
 List=$OutputDir"/ROOT/list.txt"
 
+# Name of merged total output
+Total="Total.root"
+
 rm canvas.sh
 touch canvas.sh
 
